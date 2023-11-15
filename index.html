@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{open: false}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tp semaine 1</title>
-    <script defer src="https://unpkg.com/alpinejs"></script>
-</head>
-<body>
-    <!-- https://emmet.io/ -->
-    <!-- header>h1{test de menu} -->
-<header>
-<button>menu</button>
-<h1>test de menu</h1>
-<!-- h2>lorem2^p>lorem -->
+<html lang="fr" x-data="{menuIsOpen: false}">
 
-</header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tp semaine 1</title>
+  <script defer src="https://unpkg.com/alpinejs"></script>
+</head>
+
+<body>
+  <!-- https://emmet.io/ -->
+  <!-- header>h1{test de menu} -->
+  <header>
+    <button>menu</button>
+    <h1>test de menu</h1>
+    <nav id="mainNav" x-show="menuIsOpen">
+      <ul>
+        <li><a href="#">Lien 1</a></li>
+        <li><a href="#">Lien 2</a></li>
+        <li><a href="#">Lien 3</a></li>
+      </ul>
+    </nav>
+    <!-- h2>lorem2^p>lorem -->
+
+  </header>
 
 </body>
+
 </html>
