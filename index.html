@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen: false}">
-
+<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,21 +12,45 @@
   <!-- header>h1{test de menu} -->
   <header>
     
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen">
+    <button aria-controls="mainNav" 
+    @click="menuIsOpen = ! menuIsOpen"
+    class="header_menuBtn">
      menu
     </button>
     <h1>test de menu</h1>
-    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.500ms> 
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.500ms 
+    class="menu"> 
       <ul>
         <li><a href="#">Lien 1</a></li>
         <li><a href="#">Lien 2</a></li>
         <li><a href="#">Lien 3</a></li>
       </ul>
     </nav>
-    <!-- h2>lorem2^p>lorem -->
-
+    <style>
+      .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vw;
+        background-color: antiquewhite;
+        display: grid;
+        place-content: center;
+    
+      }
+    
+      .header_menuBtn {
+        position: relative;
+        z-index: 10;
+      }
+    
+      .noscroll,
+      .noscroll body {
+        overflow: hidden;
+      }
+    </style>
   </header>
-
+<!-- h2>lorem2^p>lorem -->
 </body>
 
 </html>
