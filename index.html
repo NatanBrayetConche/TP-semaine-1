@@ -12,7 +12,10 @@
   <!-- https://emmet.io/ -->
   <!-- header>h1{test de menu} -->
   <header>
-    <button>menu</button>
+    
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen">
+     menu
+    </button>
     <h1>test de menu</h1>
     <nav id="mainNav" x-show="menuIsOpen">
       <ul>
